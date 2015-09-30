@@ -2,7 +2,7 @@
 machine:
   environment:
     IMPORT_PATH: "github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
-    MYGOPATH: "echo $GOPATH | cut -d : -f 1"
+    MYGOPATH: "$(echo $GOPATH | cut -d : -f 1)"
 
 dependencies:
   pre:
