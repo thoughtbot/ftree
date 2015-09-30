@@ -25,7 +25,7 @@ func main() {
 		tree = merge(part, tree)
 	}
 
-	tree.Print(0)
+	tree.Print(0, nil)
 }
 
 func buildTree(line string) node {
@@ -51,17 +51,35 @@ func merge(src node, dest node) node {
 
 type node map[string]node
 
-func (n node) Print(indent int) {
+func (n node) Print(indent int, leaders []string) {
 	var keys []string
 	for k := range n {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
-	for _, part := range keys {
-		for i := 0; i < indent; i++ {
-			fmt.Print("│   ")
+	for i, part := range keys {
+		if part == "" {
+			n[part].Print(indent, leaders)
+			continue
 		}
-		fmt.Printf("├── %s\n", part)
-		n[part].Print(indent + 1)
+		for _, l := range leaders {
+			fmt.Print(l)
+		}
+		for {
+			if len(n[part]) != 1 {
+				break
+			}
+			for k, v := range n[part] {
+				part += "/" + k
+				n[part] = v
+			}
+		}
+		if i == len(keys)-1 {
+			fmt.Printf("%s %s\n", "└──", part)
+			n[part].Print(indent+1, append(leaders, "    "))
+		} else {
+			fmt.Printf("%s %s\n", "├──", part)
+			n[part].Print(indent+1, append(leaders, "│   "))
+		}
 	}
 }
