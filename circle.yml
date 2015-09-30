@@ -2,13 +2,13 @@
 machine:
   environment:
     IMPORT_PATH: "github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
+    MYGOPATH: "echo $GOPATH | cut -d : -f 1"
 
 dependencies:
   pre:
     - go get github.com/tools/godep
 
   override:
-    - export MYGOPATH=$(echo $GOPATH | cut -d : -f 1)
     - mkdir -p "$MYGOPATH/src/$IMPORT_PATH"
     - rsync -azC --delete ./ "$MYGOPATH/src/$IMPORT_PATH/"
 
