@@ -16,7 +16,7 @@ type Node map[string]Node
 //     │   └── tree_test.go
 //     └── main.go
 //
-// It should initially be called with as n.Print(0, nil) as the arguments are
+// Print should initially be called as n.Print(0, nil). The arguments are
 // primarily interesting during recursion.
 func (n Node) Print(indent int, leaders []string) {
 	var keys []string
