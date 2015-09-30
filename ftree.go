@@ -57,14 +57,20 @@ func (n node) Print(indent int, leaders []string) {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
+
 	for i, part := range keys {
 		if part == "" {
 			n[part].Print(indent, leaders)
 			continue
 		}
+
 		for _, l := range leaders {
 			fmt.Print(l)
 		}
+
+		// For chains of single element maps, such as
+		// { "Users": { "caleb": { "code": {}, "books": {} } },
+		// combine to { "Users/caleb": { "code": {}, "books": {} } }.
 		for {
 			if len(n[part]) != 1 {
 				break
@@ -74,6 +80,7 @@ func (n node) Print(indent int, leaders []string) {
 				n[part] = v
 			}
 		}
+
 		if i == len(keys)-1 {
 			fmt.Printf("%s %s\n", "└──", part)
 			n[part].Print(indent+1, append(leaders, "    "))
