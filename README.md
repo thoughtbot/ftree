@@ -33,7 +33,26 @@ Usage
     ├── .vimrc
     └── .zshrc
 
-❯ find ~/code/jsbox/{app,spec}/models | ftree
+❯ find ~/code/jsbox/{app,spec}/models
+/Users/caleb/code/jsbox/app/models
+/Users/caleb/code/jsbox/app/models/.keep
+/Users/caleb/code/jsbox/app/models/analytics.rb
+/Users/caleb/code/jsbox/app/models/concerns
+/Users/caleb/code/jsbox/app/models/concerns/.keep
+/Users/caleb/code/jsbox/app/models/execution_record.rb
+/Users/caleb/code/jsbox/app/models/guest.rb
+/Users/caleb/code/jsbox/app/models/organization.rb
+/Users/caleb/code/jsbox/app/models/script.rb
+/Users/caleb/code/jsbox/app/models/script_runner.rb
+/Users/caleb/code/jsbox/app/models/subscription.rb
+/Users/caleb/code/jsbox/app/models/user.rb
+/Users/caleb/code/jsbox/spec/models
+/Users/caleb/code/jsbox/spec/models/script_runner_spec.rb
+/Users/caleb/code/jsbox/spec/models/script_spec.rb
+/Users/caleb/code/jsbox/spec/models/subscription_spec.rb
+/Users/caleb/code/jsbox/spec/models/user_spec.rb
+
+❯ !! | ftree
 └── Users/caleb/code/jsbox
     ├── app/models
     │   ├── .keep
