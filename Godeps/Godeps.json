@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/calebthompson/ftree",
+	"GoVersion": "go1.5.1",
+	"Deps": []
+}
