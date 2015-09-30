@@ -8,8 +8,9 @@ dependencies:
     - go get github.com/tools/godep
 
   override:
-    - mkdir -p "$GOPATH/src/$IMPORT_PATH"
-    - rsync -azC --delete ./ "$GOPATH/src/$IMPORT_PATH/"
+    - export MYGOPATH=$(echo $GOPATH | cut -d : -f 1)
+    - mkdir -p "$MYGOPATH/src/$IMPORT_PATH"
+    - rsync -azC --delete ./ "$MYGOPATH/src/$IMPORT_PATH/"
 
 test:
   pre:
