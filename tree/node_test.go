@@ -1,4 +1,4 @@
-package ftree
+package tree
 
 func ExamplePrint() {
 	tree := Node{

@@ -1,4 +1,4 @@
-package ftree
+package tree
 
 import (
 	"reflect"
