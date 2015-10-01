@@ -3,8 +3,6 @@ package main
 import (
 	"bufio"
 	"os"
-
-	"github.com/calebthompson/ftree/ftree"
 )
 
 func main() {
