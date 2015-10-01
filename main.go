@@ -3,6 +3,8 @@ package main
 import (
 	"bufio"
 	"os"
+
+	"github.com/calebthompson/ftree/tree"
 )
 
 func main() {
@@ -12,6 +14,6 @@ func main() {
 		lines = append(lines, r.Text())
 	}
 
-	t := ftree.Tree(lines, "/")
+	t := tree.Tree(lines, "/")
 	t.Print(0, nil)
 }
