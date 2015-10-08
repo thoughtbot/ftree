@@ -71,3 +71,8 @@ Usage
         ├── subscription_spec.rb
         └── user_spec.rb
 ```
+
+Installation
+------------
+
+See [/dist](/dist).
