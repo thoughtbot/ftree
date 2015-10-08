@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	version = "v0.1.0"
+	version = "v0.2.0"
 	help    = `Pipe output from some command that lists a single file per line to ftree.
 	find . | ftree
 	git ls-files {app,spec}/models | ftree
