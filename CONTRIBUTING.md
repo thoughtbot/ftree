@@ -7,9 +7,9 @@ Fork the repo.
 
 Get a working [Go installation],
 and clone the project into your [Go work environment]
-\(that is, `$GOPATH/src/github.com/calebthompson/ftree`).
+\(that is, `$GOPATH/src/github.com/thoughtbot/ftree`).
 If your Go environment is already set up, you can get the code instead with
-`go get github.com/calebthompson/ftree`. It will be in the same location as the
+`go get github.com/thoughtbot/ftree`. It will be in the same location as the
 previous path.
 
 [Go installation]: http://golang.org/doc/install
