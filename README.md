@@ -76,3 +76,15 @@ Installation
 ------------
 
 See [/dist](/dist).
+
+
+About
+-----
+
+`ftree` is maintained by Caleb Thompson and [thoughtbot's Go development team].
+
+[thoughtbot's Go development team]: <https://thoughtbot.com/services/go>  "Go development team | Hire thoughtbot Gophers"
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
